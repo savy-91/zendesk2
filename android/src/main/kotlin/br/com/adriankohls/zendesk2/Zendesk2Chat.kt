@@ -90,7 +90,7 @@ class Zendesk2Chat(private val activity: Activity?, private val channel: MethodC
         val accountKey = call.argument<String>("accountKey")!!
         val appId = call.argument<String>("appId")!!
         Chat.INSTANCE.init(activity!!, accountKey, appId)
-        customize()
+        customize(call)
     }
 
     fun logger(call: MethodCall) {
